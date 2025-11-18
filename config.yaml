@@ -1,0 +1,14 @@
+# yaml-language-server: $schema=./node_modules/envio/evm.schema.json
+name: envio-indexer
+networks:
+- id: 8453
+  start_block: 0
+  contracts:
+  - name: DasherFactory
+    address:
+    - 0x2f8c8206E3Bf52F571a9d42634f2d6355be90886
+    handler: src/EventHandlers.ts
+    events:
+    - event: ChallengeCreated(address _creator, address _challengeContractAddress, uint64 _startingDate, uint64 _totalDuration, uint128 _stakeAmount, uint256 _timestamp)
+unordered_multichain_mode: true
+preload_handlers: true

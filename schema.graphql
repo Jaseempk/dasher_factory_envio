@@ -1,0 +1,10 @@
+type DasherFactory_ChallengeCreated {
+  id: ID!
+  _creator: String!
+  _challengeContractAddress: String!
+  _startingDate: BigInt!
+  _totalDuration: BigInt!
+  _stakeAmount: BigInt!
+  _timestamp: BigInt!
+}
+
