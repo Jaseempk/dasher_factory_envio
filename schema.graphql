@@ -8,3 +8,40 @@ type DasherFactory_ChallengeCreated {
   _timestamp: BigInt!
 }
 
+type Dasher_RoleAdminChanged {
+  id: ID!
+  role: String!
+  previousAdminRole: String!
+  newAdminRole: String!
+}
+
+type Dasher_RoleGranted {
+  id: ID!
+  role: String!
+  account: String!
+  sender: String!
+}
+
+type Dasher_RoleRevoked {
+  id: ID!
+  role: String!
+  account: String!
+  sender: String!
+}
+
+type Dasher_UserJoined {
+  id: ID!
+  contractAddress: String!
+  _user: String!
+  _timestamp: BigInt!
+  _challengeAddress: String!
+  _challengeValue: BigInt!
+}
+
+type Dasher_UserStakeClaimed {
+  id: ID!
+  contractAddress: String!
+  _user: String!
+  _claimAmount: BigInt!
+  _timestamp: BigInt!
+}
